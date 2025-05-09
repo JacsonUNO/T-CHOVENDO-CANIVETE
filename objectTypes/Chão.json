@@ -1,0 +1,29 @@
+{
+	"name": "Chão",
+	"plugin-id": "TiledBg",
+	"sid": 865865569703847,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 732609111231373
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 48,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 1673386,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

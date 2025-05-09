@@ -1,0 +1,30 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 345162884806862,
+					"parameters": {
+						"object": "play"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 183325093918042,
+					"parameters": {
+						"layout": "Layout 2"
+					}
+				}
+			],
+			"sid": 664336069190674
+		}
+	],
+	"sid": 626975436290425
+}

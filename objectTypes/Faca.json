@@ -1,0 +1,66 @@
+{
+	"name": "Faca",
+	"plugin-id": "Sprite",
+	"sid": 484281750829337,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 343199199710997
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3188745,
+						"collisionPoly": {
+							"points": [
+								0.31423611111111155,
+								0.375,
+								0.625,
+								0.375,
+								0.875,
+								0.4375,
+								0.90625,
+								0.46875,
+								0.90625,
+								0.53125,
+								0.875,
+								0.5625,
+								0.625,
+								0.625,
+								0.31423611111111127,
+								0.6284722222222223
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 942506072998545,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,514 @@
+{
+	"name": "Folha de eventos 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Direcao",
+			"type": "string",
+			"initialValue": "direita",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 363541202108083
+		},
+		{
+			"eventType": "variable",
+			"name": "Pontos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 951260907968983
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 326369604140114,
+					"parameters": {
+						"object": "Direita"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 387416587319354,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 956074351469105,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 567143681362487,
+					"parameters": {
+						"animation": "\"RunR\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 881479065627541,
+					"parameters": {
+						"variable": "Direcao",
+						"value": "\"direita\""
+					}
+				}
+			],
+			"sid": 352728298089081,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 830926310808084,
+					"parameters": {
+						"object": "Esquerda"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 553624180811049,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 807808479057385,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 850474115437788,
+					"parameters": {
+						"animation": "\"RunL\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 475967114062953,
+					"parameters": {
+						"variable": "Direcao",
+						"value": "\"esquerda\""
+					}
+				}
+			],
+			"sid": 650491099855679,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 821712489152076,
+					"parameters": {
+						"object": "Direita"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 912391364097260,
+					"parameters": {
+						"object": "Esquerda"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 985944891799596,
+					"parameters": {
+						"variable": "Direcao",
+						"comparison": 0,
+						"value": "\"direita\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 273359263938640,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 368470938139929
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 113584624566137,
+					"parameters": {
+						"object": "Direita"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 307783288098651,
+					"parameters": {
+						"object": "Esquerda"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 752943102131237,
+					"parameters": {
+						"variable": "Direcao",
+						"comparison": 0,
+						"value": "\"esquerda\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 555050552169706,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 820740725578490,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 556520026082106
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 927663240729264
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Texto",
+					"sid": 948778816951543,
+					"parameters": {
+						"text": "Pontos"
+					}
+				}
+			],
+			"sid": 783643915984822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 148189255949936
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 898106377917068
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 170904654808406,
+					"parameters": {
+						"audio-file": "8-bit-background-music-for-arcade-game-come-on-mario-164702_CtARJ5gD",
+						"loop": "looping",
+						"volume": "-30",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 331847602211897,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 849215134365207
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 505521327075845,
+					"parameters": {
+						"interval-seconds": "random(0.40,2)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 410702930706208,
+					"parameters": {
+						"object-to-create": "Faca",
+						"layer": "0",
+						"x": "random(34,435)",
+						"y": "-10",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 835710913109778
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 313367945326872,
+					"parameters": {
+						"interval-seconds": "random(2.2,3)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 986852702958030,
+					"parameters": {
+						"object-to-create": "Moeda",
+						"layer": "0",
+						"x": "random(34,435)",
+						"y": "-10",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 802322624390899
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Faca",
+					"sid": 421620444186304,
+					"parameters": {
+						"object": "LimiteInferior"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Faca",
+					"sid": 839084976911070
+				}
+			],
+			"sid": 727359072992124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Moeda",
+					"sid": 186312044840045,
+					"parameters": {
+						"object": "LimiteInferior"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Moeda",
+					"sid": 892283726521241
+				}
+			],
+			"sid": 821152128196319
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 392384619096032,
+					"parameters": {
+						"object": "Moeda"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Moeda",
+					"sid": 104544719592683,
+					"parameters": {
+						"object": "PartículaMoeda",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Moeda",
+					"sid": 583857030082582
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 209240472563501,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 443492393675756,
+					"parameters": {
+						"audio-file": "retro-coin-1-236677",
+						"loop": "not-looping",
+						"volume": "-4",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 493906449315346
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 626897286272813,
+					"parameters": {
+						"object": "Faca"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Faca",
+					"sid": 426841412799103
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 192200548327663,
+					"parameters": {
+						"object": "PartículaVida",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 371578940991106
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Áudio",
+					"sid": 481047584960314
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 645181714081757,
+					"parameters": {
+						"audio-file": "morte",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 249142758035861,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 619066454092258,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 646583102817657
+		}
+	],
+	"sid": 301299772373294
+}
